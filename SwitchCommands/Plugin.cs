@@ -12,7 +12,7 @@ using static SwitchCommands.PluginCommands;
 
 namespace SwitchCommands {
     [ApiVersion(2, 1)]
-    public class SwitchCommands : TerrariaPlugin {
+    public class Plugin : TerrariaPlugin {
 
         public static Database database;
 
@@ -21,7 +21,7 @@ namespace SwitchCommands {
         public override string Description => "Run commands with a switch/level/pressure plate";
         public override Version Version => new Version(1, 0, 0, 0);
 
-        public SwitchCommands(Main game) : base(game) { }
+        public Plugin(Main game) : base(game) { }
 
         public override void Initialize() {
             database = Database.Read(Database.databasePath);

@@ -17,9 +17,9 @@ namespace SwitchCommands {
         }
 
         private static void SwitchReload(CommandArgs args) {
-            SwitchCommands.database = Database.Read(Database.databasePath);
+            Plugin.database = Database.Read(Database.databasePath);
             if (!File.Exists(Database.databasePath)) {
-                SwitchCommands.database.Write(Database.databasePath);
+                Plugin.database.Write(Database.databasePath);
             }
         }
 
@@ -115,7 +115,7 @@ namespace SwitchCommands {
                             foreach(string cmd in cmdInfo.commandList) {
                                 player.SendMessage(cmd, Color.Yellow);
                             }
-                            SwitchCommands.database.switchCommandList[player.GetData<SwitchPos>("SwitchPos").ToString()] = cmdInfo;
+                            Plugin.database.switchCommandList[player.GetData<SwitchPos>("SwitchPos").ToString()] = cmdInfo;
                             player.SetData("PlayerState", PlayerState.None);
                             player.SetData("SwitchPos", new Vector2());
                             player.SetData("CommandInfo", new CommandInfo());
