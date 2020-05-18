@@ -119,6 +119,7 @@ namespace SwitchCommands {
                             player.SetData("PlayerState", PlayerState.None);
                             player.SetData("SwitchPos", new Vector2());
                             player.SetData("CommandInfo", new CommandInfo());
+							Plugin.database.Write(Database.databasePath);
                             return;
 
                         default:
