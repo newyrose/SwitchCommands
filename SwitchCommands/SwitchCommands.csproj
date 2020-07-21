@@ -35,13 +35,19 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>references\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="OTAPI" />
+    <Reference Include="OTAPI">
+      <HintPath>references\OTAPI.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="TerrariaServer" />
-    <Reference Include="TShockAPI" />
+    <Reference Include="TerrariaServer">
+      <HintPath>references\TerrariaServer.exe</HintPath>
+    </Reference>
+    <Reference Include="TShockAPI">
+      <HintPath>references\TShockAPI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandInfo.cs" />
